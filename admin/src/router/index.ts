@@ -2,16 +2,18 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 import Main from '../views/Main.vue'
+import CourseList from '../views/courses/CourseList.vue'
 
 Vue.use(VueRouter)
 
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'main',
+    // name: 'main',
     component: Main,
     children: [
-      { path: '/', name:'home', component: Home }
+      { path: '/', name:'home', component: Home },
+      { path: '/courses/list', name:'courses-list', component: CourseList },
     ]
   }
   // {

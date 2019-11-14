@@ -3,7 +3,7 @@
     <el-aside width="200px">
       <el-menu mode="vertical" style="height: 100vh" :default-active="$route.path" router>
         <el-submenu v-for="(item, index) in menu.items"
-          :index="index + 1"
+          :index="index + '1'"
           :key="`menu-item${index}`">
           <template slot="title">{{item.title}}</template>
           <el-menu-item v-for="(subItem, subIndex) in item.items"
