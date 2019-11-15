@@ -17,10 +17,10 @@
     </el-aside>
     <el-container>
       <el-header>
-        nest-ts后台管理
+        <h3>nest-ts后台管理</h3>
       </el-header>
       <el-main>
-        <router-view></router-view>
+        <router-view :key="$route.path"></router-view>
       </el-main>
     </el-container>
   </el-container>
