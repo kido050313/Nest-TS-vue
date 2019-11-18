@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>课程列表</h3>
+    <!-- <h3>课程列表</h3>
     <div style="margin-bottom: 10px;">
       <el-button type="primary" size="small" @click="$router.push('/courses/create')">创建课程</el-button>
     </div>
@@ -19,44 +19,44 @@
         <el-button @click="remove(row)" type="text" size="small">删除</el-button>
       </template>
     </el-table-column>
-    </el-table>
+    </el-table> -->
 
   </div>
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+// import { Vue, Component } from 'vue-property-decorator'
 
-@Component({})
-export default class CourseList extends Vue {
-  data = {}
+// @Component({})
+// export default class CourseList extends Vue {
+//   data = {}
 
-  fields = {
-    _id: {label: 'ID'},
-    name: {label: '课程名称'},
-    cover: {label: '课程封面图'}
-  }
+//   fields = {
+//     _id: {label: 'ID'},
+//     name: {label: '课程名称'},
+//     cover: {label: '课程封面图'}
+//   }
 
-  async fetch() {
-    const res = await this.$http.get('courses')
-    this.data = res.data;
-  }
+//   async fetch() {
+//     const res = await this.$http.get('courses')
+//     this.data = res.data;
+//   }
 
-  async remove(row) {
-    try {
-      await this.$confirm('请确认是否删除?')
-    } catch (error) {
-      return;
-    }
-    await this.$http.delete(`courses/${row._id}`)
-    this.$message.success('删除成功')
-    this.fetch()
-  }
+//   async remove(row) {
+//     try {
+//       await this.$confirm('请确认是否删除?')
+//     } catch (error) {
+//       return;
+//     }
+//     await this.$http.delete(`courses/${row._id}`)
+//     this.$message.success('删除成功')
+//     this.fetch()
+//   }
 
-  created() {
-    this.fetch()
-  }
-}
+//   created() {
+//     this.fetch()
+//   }
+// }
 </script>
 
 <style>
