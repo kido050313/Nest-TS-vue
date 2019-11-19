@@ -9,6 +9,7 @@
       @row-update='update'
       @row-del='remove'
       @on-load="changePage"
+      @sort-change="changeSort"
     >
     </avue-crud>
 
@@ -32,7 +33,7 @@ export default class ResourceList extends Vue {
     total: 0
   }
   query: any = {
-    limit: 2
+    // limit: 2
   }
 
   async fetch() {
@@ -54,6 +55,17 @@ export default class ResourceList extends Vue {
     this.query.limit = pageSize;
     this.query.page = currentPage;
     this.fetch()
+  }
+
+  async changeSort({ order, prop}) {
+      if (!order) {
+        this.query.sort = null
+      } else {
+        this.query.sort = {
+          [prop]: order === 'ascending' ? 1 : -1
+        }
+      }
+      this.fetch()
   }
 
   async create(row,done,loading) {

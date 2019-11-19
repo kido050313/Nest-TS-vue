@@ -12,3 +12,4 @@ nest+ts+vue视频网站全栈开发练习
 9. 使用avue改造课程CRUD操作
 10. 添加通用ResourceCrud组件，配合Avue将option移到后台控制
 11. 添加分页功能
+12. 添加排序功能
