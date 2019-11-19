@@ -10,3 +10,4 @@ nest+ts+vue视频网站全栈开发练习
 7. vue-ele-form创建课程编辑/新建表单，添加课程编辑/新建路由
 8. 对接课程创建/编辑接口，添加路由跳转，完成课程相关功能
 9. 使用avue改造课程CRUD操作
+10. 添加通用ResourceCrud组件，配合Avue将option移到后台控制
