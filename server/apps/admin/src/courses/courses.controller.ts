@@ -22,7 +22,8 @@ export class CoursesController {
     return {
       title: "课程管理",
       column: [
-        { sortable:true, prop: "name", label: "课程名称" },
+        // regex: 是否启用正则搜索
+        { sortable:true, prop: "name", label: "课程名称", search: true, regex: true },
         { prop: "cover", label: "课程封面图" }
       ]
     }

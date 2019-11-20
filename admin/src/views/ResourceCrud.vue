@@ -10,6 +10,7 @@
       @row-del='remove'
       @on-load="changePage"
       @sort-change="changeSort"
+      @search-change="changeSearch"
     >
     </avue-crud>
 
@@ -66,6 +67,18 @@ export default class ResourceList extends Vue {
         }
       }
       this.fetch()
+  }
+
+  async changeSearch(where) {
+    for(let k in where) {
+      global.console.log(k)
+      const field = this.options.column.find(v => v.prop === k)
+      if (field.regex) {
+        where[k] = {$regex: where[k]}
+      }
+    }
+    this.query.where = where;
+    this.fetch();
   }
 
   async create(row,done,loading) {
