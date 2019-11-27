@@ -23,8 +23,8 @@ export class CoursesController {
       title: "课程管理",
       column: [
         // regex: 是否启用正则搜索
-        { sortable:true, prop: "name", label: "课程名称", search: true, regex: true },
-        { prop: "cover", label: "课程封面图" }
+        { sortable:true, prop: "name", label: "课程名称", search: true, regex: true, row: true },
+        { prop: "cover", label: "课程封面图", width: '120', type: 'upload', listType: 'picture-img', action: 'upload', row: true }
       ]
     }
   }

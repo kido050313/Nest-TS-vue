@@ -19,4 +19,8 @@ body {
   margin: 0;
   padding: 0;
 }
+/* 上传图片大小 */
+.avue-upload__avatar {
+  height: auto!important;
+}
 </style>
