@@ -1,5 +1,9 @@
-# Nest-TS-vue
+# Nest-TS-Vue
 nest+ts+vue视频网站全栈开发练习
+
+## 后台管理admin及后台server开发（Nest+TS+Vue）
+
+start server/admin : nest start -w admin
 
 1. 使用nest子项目模式搭建服务端项目
 2. 使用Crud装饰器快速实现增删改查接口
@@ -15,3 +19,8 @@ nest+ts+vue视频网站全栈开发练习
 12. 添加排序功能
 13. 动态生成搜索表单，添加模糊查询功能
 14. 图片上传和展示（本地）--- 更改服务端封面图行属性type：upload等，添加全局上传接口，开放静态文件托管, APP.vue添加avuejs 图片上传$httpaxios方法,优化图片展示过大问题
+
+## web端视频网站开发（Nuxt+Vuetify）
+
+1. 在根目录下创建项目web端项目： $ npx create-nuxt-app web 
+2. cd web 执行npm run dev 启动项目
