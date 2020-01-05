@@ -11,7 +11,7 @@ import router from './router'
 Vue.config.productionTip = false
 
 const http = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'http://localhost:3009'
 })
 
 // avue上传图片使用

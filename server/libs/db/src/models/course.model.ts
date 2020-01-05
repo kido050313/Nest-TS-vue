@@ -4,7 +4,8 @@ import { Episode } from './episode.model';
 
 @modelOptions({
   schemaOptions: { // 等同于mongoose中schema定义传参
-    timestamps: true 
+    timestamps: true,
+    toJSON: { virtuals: true } // 查询虚拟字段
   }
 })
 export class Course {
@@ -16,6 +17,10 @@ export class Course {
   @prop()
   cover: string
 
-  @arrayProp({itemsRef: 'Episode'}) // 这里可以用字符串也可以用变量，但是js循环引用可能造成值为空
-  episodes: Ref<Episode>
+  @arrayProp({
+    ref: 'Episode',
+    localField: '_id',
+    foreignField: 'course'
+  }) // 这里可以用字符串也可以用变量，但是js循环引用可能造成值为空
+  episodes: Ref<Episode>[]
 }

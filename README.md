@@ -24,3 +24,6 @@ start server/admin : nest start -w admin
 
 1. 在根目录下创建项目web端项目： $ npx create-nuxt-app web 
 2. cd web 执行npm run dev 启动项目
+3. 选择google youtube主题,初始化视频和评论页面
+4. 使用dotenv和axios开发视屏列表页面
+5. 更改course Model，关联查询episodes
